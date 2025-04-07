@@ -1,0 +1,110 @@
+    /* Fundo da página */
+    body { 
+        background: url("https://cdna.artstation.com/p/assets/images/images/049/929/492/large/surya-nair-surya-nair-squid-royale-tug-of-war-final.jpg?1653649180") no-repeat center center fixed;
+        background-size: cover;
+        font-family: "Gabarito", sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+  
+      /* Header */
+      header {
+        background: rgba(0, 0, 0, 0.8);
+        padding: 10px 20px;
+        position: fixed;
+        width: 100%;
+        height: 60px; 
+        top: 0;
+        z-index: 100;
+        display: flex;
+        align-items: center;
+      }
+  
+      /* Container do header */
+      .header-container {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+  
+  /* Logo Styles */
+  .logo {
+    position: absolute;
+    top: 20px;
+    right: 50px;
+    max-width: 150px;
+    width: auto;
+    padding-right: 20px;
+  }
+      .logo img {
+        width: 100%;
+      }
+  
+      /* Título principal */
+      .titulo {
+        text-align: center;
+        margin-top: 10px; 
+      }
+  
+  
+      h2, p {
+        color: white;
+        text-align: center;
+        margin-top: 2rem;
+      }
+  
+      /* Caixa principal do jogo */
+      .conteudo-jogo {
+        background: rgba(0, 0, 0, 0.7);
+        box-shadow: 0 0 5px #b3a16e;
+        margin: 30px auto;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin-top: 10rem;
+        max-width: 600px;
+        border-radius: 10px;
+      }
+  
+      .conteudo-jogo:hover {
+        background: rgba(0, 0, 0);
+        box-shadow: 0 0 5px #2aa592;
+      }
+  
+  #container img {
+      width: 200px; 
+      height: 200px; 
+      object-fit: cover; 
+      border-radius: 50%; 
+      display: block; 
+      margin: 0 auto; 
+  }
+  
+      /* Botões */
+      button {
+        background-color: #2aa592;
+        border: none;
+        padding: 10px 20px;
+        margin: 10px;
+        border-radius: 5px;
+        color: white;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        font-size: 1.2rem;
+      }
+  
+      button:hover {
+        background: #cb2124;
+      }
+  
+      /* Resultados */
+      .resultado {
+        margin-top: 20px;
+        font-size: 18px;
+        color: white;
+      }
+  
+  

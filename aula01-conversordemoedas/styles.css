@@ -1,0 +1,256 @@
+/* Global Styles */
+body {
+    background-color: #aa7c4d;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    position: relative;
+  }
+  
+  header {
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 60px;
+  }
+  
+  /* Logo Styles */
+  .logo {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    max-width: 150px;
+    width: auto;
+  }
+  
+  /* Container with the background image */
+  .container {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  .container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('https://images.unsplash.com/photo-1607863680198-23d4b2565df0?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center center/cover;
+    z-index: -1;
+    filter: blur(4px);
+  }
+  
+  /* Content div for text and button */
+  .content {
+    position: relative;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 30px 50px;
+    border-radius: 12px;
+    max-width: 600px;
+    width: 80%;
+    margin: 40px auto;
+    box-shadow:
+      0 15px 25px rgba(0, 0, 0, 0.4),
+      0 5px 10px rgba(0, 0, 0, 0.3),
+      0 0 0 1px rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    z-index: 1;
+  }
+  
+  .input-container {
+    margin: 25px 0;
+  }
+  
+  input {
+    padding: 15px;
+    font-size: 18px;
+    width: 60%;
+    border-radius: 8px;
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+  }
+  
+  input:focus {
+    outline: none;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  }
+  
+  button {
+    background-color: #f86b59;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.3em;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  button:hover {
+    background-color: #31201b;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  }
+  
+  button:active {
+    transform: translateY(1px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Results Styles */
+  .results {
+    margin-top: 30px;
+    font-size: 20px;
+    text-align: left;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+  
+  .results.show {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .result-item {
+    margin: 15px 0;
+    padding: 15px;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 6px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .currency-flag {
+    font-size: 24px;
+    margin-right: 10px;
+  }
+  
+  .currency-value {
+    font-weight: bold;
+    font-size: 22px;
+  }
+  
+  h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+  }
+  
+  p {
+    font-size: 18px;
+  }
+  
+  /* Footer Styles */
+  footer {
+    background-color: rgba(0, 0, 0, 0.5);
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 1024px) {
+    .content {
+      padding: 25px 40px;
+      width: 90%;
+    }
+  
+    input {
+      width: 70%;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .logo {
+      max-width: 120px;
+      top: 15px;
+      right: 15px;
+    }
+  
+    .content {
+      padding: 20px 30px;
+      max-width: 90%;
+    }
+  
+    input {
+      width: 80%;
+      font-size: 16px;
+    }
+  
+    button {
+      font-size: 1.1em;
+      padding: 12px 25px;
+    }
+  
+    .results {
+      font-size: 18px;
+    }
+  
+    .currency-value {
+      font-size: 20px;
+    }
+  
+    h2 {
+      font-size: 24px;
+    }
+  
+    p {
+      font-size: 16px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .content {
+      padding: 15px 20px;
+    }
+  
+    input {
+      width: 100%;
+      max-width: 100%;
+      box-sizing: border-box;
+      font-size: 15px;
+    }
+  
+    button {
+      font-size: 1em;
+      padding: 10px 20px;
+    }
+  
+    .result-item {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .currency-flag {
+      font-size: 20px;
+      margin-bottom: 8px;
+    }
+  
+    .currency-value {
+      font-size: 18px;
+    }
+  
+    h2 {
+      font-size: 22px;
+    }
+  
+    p {
+      font-size: 15px;
+    }
+  }
+  
